@@ -6,7 +6,7 @@
 set -Eeuo pipefail
 
 VERSION="2.0.0"
-SCRIPT_NAME="$(basename "$0")"
+SCRIPT_NAME="$(basename -- "${0:-pve8-to-pve9-upgrade.sh}")"
 HOSTNAME_SHORT="$(hostname -s 2>/dev/null || hostname)"
 TIMESTAMP="$(date +%F-%H%M%S)"
 LOG="/root/pve8-to-pve9-upgrade-${TIMESTAMP}.log"
